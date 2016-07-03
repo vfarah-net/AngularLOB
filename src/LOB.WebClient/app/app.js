@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app', [
+    var app = angular.module('productManagement', [
         // Angular modules 
-        'ngRoute'
+        //'ngRoute'
 
         // Custom modules 
 
