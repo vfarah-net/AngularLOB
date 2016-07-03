@@ -1,0 +1,4 @@
+F:\Dev\Git\AngularLOB\src\LOB.Resources\bin\Debug\LOB.Resources.dll
+F:\Dev\Git\AngularLOB\src\LOB.Resources\bin\Debug\LOB.Resources.pdb
+F:\Dev\Git\AngularLOB\src\LOB.Resources\obj\Debug\LOB.Resources.dll
+F:\Dev\Git\AngularLOB\src\LOB.Resources\obj\Debug\LOB.Resources.pdb
