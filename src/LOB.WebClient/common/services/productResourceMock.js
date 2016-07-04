@@ -86,7 +86,7 @@
             var id = parameters[length - 1];
             if (id > 0) {
                 for (var i = 0; i < products.length; i++) {
-                    if (products[i].productId == id) {
+                    if (products[i].productId.toString() === id.toString()) {
                         product = products[i];
                         break;
                     }
@@ -105,7 +105,7 @@
             } else if (product) {
                 //Update existing product
                 for (var i = 0; i < products.length; i++) {
-                    if (products[i].productId === product.productId) {
+                    if (products[i].productId.toString() === product.productId.toString()) {
                         products[i] = product;
                         break;
                     }
