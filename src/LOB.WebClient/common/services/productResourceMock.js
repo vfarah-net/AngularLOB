@@ -79,14 +79,14 @@
 
         //Mock extracting a product by productId
         var editingRegex = new RegExp(productUrl + "/[0-9][0-9]*", "");
-        $httpBackend.whenGET(editingRegex).respond(function(method, url, data) {
+        $httpBackend.whenGET(editingRegex).respond(function (method, url, data) {
             var product = { "productId": 0 };
             var parameters = url.split("/");
             var length = parameters.length;
             var id = parameters[length - 1];
             if (id > 0) {
                 for (var i = 0; i < products.length; i++) {
-                    if (products[i].productId === id) {
+                    if (products[i].productId == id) {
                         product = products[i];
                         break;
                     }

@@ -19,7 +19,7 @@
                 //Home
                 .state("home", {
                     url: "/",
-                    templateUrl:"app/welcomeView.html"                    
+                    templateUrl: "app/welcomeView.html"
                 })
                 // Products
                 .state("productList", {
@@ -31,6 +31,18 @@
                     url: "/products/edit/:productId",
                     templateUrl: "app/products/productEditView.html",
                     controller: "ProductEditCtl as vm"
+                })
+                .state("productDetail", {
+                    url: "/products/:productId",
+                    templateUrl: "app/products/productDetailView.html",
+                    controller: "ProductDetailCtl as vm",
+                    resolve: {
+                        productResource: "productResource",
+                        product: function(productResource, $stateParams) {
+                            var productId = $stateParams.productId;
+                            return productResource.get({ productId: productId }).$promise;
+                        }
+                    }
                 });
         }
     ]);
