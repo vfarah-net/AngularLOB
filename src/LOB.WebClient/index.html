@@ -10,7 +10,27 @@
     <!--<link href="Content/bootswatch/spacelab/bootstrap.min.css" rel="stylesheet" />-->
     <link href="Content/bootswatch/darkly/bootstrap.min.css" rel="stylesheet" />
     <link href="css/font-awesome.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet"/>
+
+    <!-- Library Scripts -->
+
+    <script src="scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-mocks.js"></script>
+    <!-- NOTE: Hand roled into the application -->
+    <script src="Scripts/angular-ui-router.js"></script>
+
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResource.js"></script>
+    <script src="common/services/productResourceMock.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/products/productListCtl.js"></script>
 </head>
 <body ng-app="productManagement">
     <nav class="navbar navbar-default">
@@ -20,51 +40,10 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <!--<div ng-if="vm.isLoggedIn()" ng-include="'app/products/productEditView.html'"></div>-->
-        <div class="panel-body">
-            <div class="panel-heading">
-                <h4>Product List</h4>
-            </div>
-            <table class="table table-bordered table-striped table-condensed" ng-controller="ProductListCtl as vm">
-                <thead>
-                <tr>
-                    <td>
-                        <button class="btn btn-sm btn-primary" type="button" ng-click="vm.toggleImage()">
-                            <i class="fa {{vm.showImage ? 'fa-angle-up' : 'fa-angle-down'}}"> Image</i>
-                        </button>
-                    </td>
-                    <td>Product</td>
-                    <td>Code</td>
-                    <td>Available</td>
-                    <td>Price</td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="product in vm.products">
-                    <td>
-                        <img ng-if="vm.showImage"
-                             ng-src="{{product.imageUrl}}"
-                             style="width: 50px; margin: 2px"
-                             title="{{product.productName}}"/>
-                    </td>
-                    <td>{{product.productName}}</td>
-                    <td>{{product.productCode}}</td>
-                    <td>{{product.releaseDate}}</td>
-                    <td>{{product.price | currency}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 
-    <!-- Library Scripts -->
-    <script src="scripts/angular.js"></script>
-    <script src="Scripts/angular-resource.js"></script>
-    <!-- Application Script -->
-    <script src="app/app.js"></script>
-    <!-- Services -->
-    <!-- Controllers -->
-    <script src="app/products/productListCtl.js"></script>
+    <div class="container">
+        <!--<div ng-include="'app/products/productListView.html'"></div>-->
+        <div ui-view></div>
+    </div>
 </body>
 </html>

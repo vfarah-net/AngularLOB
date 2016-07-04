@@ -2,3 +2,4 @@ F:\Dev\Git\AngularLOB\src\LOB.Domain\bin\Debug\LOB.Domain.dll
 F:\Dev\Git\AngularLOB\src\LOB.Domain\bin\Debug\LOB.Domain.pdb
 F:\Dev\Git\AngularLOB\src\LOB.Domain\obj\Debug\LOB.Domain.dll
 F:\Dev\Git\AngularLOB\src\LOB.Domain\obj\Debug\LOB.Domain.pdb
+F:\Dev\Git\AngularLOB\src\LOB.Domain\obj\Debug\LOB.Domain.csprojResolveAssemblyReference.cache
