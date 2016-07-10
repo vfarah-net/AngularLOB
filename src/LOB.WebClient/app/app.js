@@ -8,7 +8,9 @@
         "common.services",
         "productResourceMock",
         // 3rd Party Modules
-        "ui.router"
+        "ui.router",
+        "ui.mask",
+        "ui.bootstrap"
     ]);
 
     app.config(["$stateProvider",
