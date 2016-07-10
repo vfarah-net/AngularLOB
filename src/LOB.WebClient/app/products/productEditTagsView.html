@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container-fluid">
-            <form class="form-horizontal" name="productForm" role="form">
+            <form class="form-horizontal" name="productForm" role="form" novalidate>
                 <fieldset>
                     <legend>Product Search Tags</legend>
                 </fieldset>
@@ -12,7 +12,8 @@
                                class="form-control"
                                type="text"
                                placeholder="Product search keywords seperated by a comma"
-                               ng-model="vm.product.newTags" />
+                               ng-model="vm.product.newTags"                               
+                               />
                     </div>
                     <div class="col-sm-1">
                         <button type="button" class="btn btn-default" title="Add the specified tags" ng-click="vm.addTags(vm.product.newTags)">Add</button>
